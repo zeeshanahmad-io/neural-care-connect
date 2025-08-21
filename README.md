@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# Dr. Faiyaz Ahmad's Clinic Website
 
-## Project info
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f46b811-75b8-4be6-b1c6-04b188e78f16/deploy-status)](https://app.netlify.com/projects/drfaiyazahmad/deploys)
 
-**URL**: https://lovable.dev/projects/406780e8-6770-48ad-ae57-27928c26ee62
+This repository contains the source code for the official website of Dr. Faiyaz Ahmad's Neurology Clinic. Built with modern web technologies, it provides comprehensive information about services, facilitates online appointment booking, and offers various contact methods.
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+Visit the live website: [drfaiyazahmad.com](https://drfaiyazahmad.com)
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/406780e8-6770-48ad-ae57-27928c26ee62) and start prompting.
+*   **Responsive Design:** Optimized for seamless viewing across all devices (desktop, tablet, mobile).
+*   **Service Overview:** Detailed information about neurological services offered.
+*   **Online Appointment Booking:** Convenient form for patients to request appointments.
+*   **Contact Forms:** Easy ways for patients to get in touch via email or WhatsApp.
+*   **Theme Customizer:** (If applicable, based on final decision) Allows users to switch between different accent color themes.
+*   **Professional Footer:** Essential clinic information and quick links.
+*   **SEO Friendly:** Basic meta tags for better search engine visibility.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Technologies Used
 
-**Use your preferred IDE**
+*   **Frontend:** React, TypeScript, Vite
+*   **Styling:** Tailwind CSS, Shadcn UI
+*   **Routing:** React Router DOM
+*   **Hosting & CI/CD:** Netlify
+*   **Form Handling:** Netlify Forms
+*   **Professional Email:** Zoho Mail
+*   **Icons:** Lucide React, React Icons (FaWhatsapp)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+To set up the project locally, follow these steps:
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+*   Node.js (v18 or higher)
+*   npm or Yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone [YOUR_REPOSITORY_URL_HERE]
+cd neural-care-connect
+npm install # or yarn install
 ```
 
-**Edit a file directly in GitHub**
+### Running Locally
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev # or yarn dev
+```
 
-**Use GitHub Codespaces**
+## 🚀 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is configured for continuous deployment with Netlify. Any pushes to the `main` branch of the connected GitHub repository will automatically trigger a new build and deployment to [drfaiyazahmad.com](https://drfaiyazahmad.com).
 
-## What technologies are used for this project?
+## 📧 Email Configuration
 
-This project is built with:
+Professional email services for this domain are powered by Zoho Mail. All necessary DNS records (MX, SPF, DKIM) are managed via Netlify DNS.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📞 Contact
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/406780e8-6770-48ad-ae57-27928c26ee62) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For any inquiries, please contact [zeeshan.official@gmail.com](mailto:zeeshan.official@gmail.com).
