@@ -40,21 +40,21 @@ const HeroSection = () => {
 
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-primary-light rounded-full flex items-center justify-center">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-foreground">12+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-primary-light rounded-full flex items-center justify-center">
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-foreground">1000+</div>
                 <div className="text-sm text-muted-foreground">Patients Treated</div>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-primary-light rounded-full flex items-center justify-center">
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-foreground">24/7</div>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
-            <div className="absolute -top-6 -right-6 w-full h-full bg-primary/10 rounded-2xl -z-10"></div>
+            <div className="absolute -top-6 -right-6 w-full h-full bg-primary-light rounded-2xl -z-10"></div>
           </div>
         </div>
       </div>

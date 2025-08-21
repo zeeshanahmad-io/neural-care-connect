@@ -70,7 +70,7 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card key={index} className="medical-card-gradient hover:shadow-lg medical-transition group text-center">
                 <CardHeader>
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 medical-transition">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary-light rounded-full flex items-center justify-center group-hover:bg-primary/20 medical-transition">
                     <feature.icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl font-heading">{feature.title}</CardTitle>

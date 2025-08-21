@@ -70,7 +70,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card key={index} className="medical-card-gradient hover:shadow-lg medical-transition group">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 medical-transition">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary-light rounded-full flex items-center justify-center group-hover:bg-primary/20 medical-transition">
                   <service.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
@@ -86,7 +86,7 @@ const Services = () => {
                     {service.conditions.map((condition, idx) => (
                       <span 
                         key={idx} 
-                        className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
+                        className="text-xs bg-primary-light text-primary px-2 py-1 rounded-full"
                       >
                         {condition}
                       </span>

@@ -8,7 +8,6 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Medical Brand Colors - Deep Teal Primary */
     --background: 0 0% 100%;
     --foreground: 215 25% 27%;
 
@@ -18,7 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 158 64% 52%; /* Deep teal for medical branding */
+    --primary: 145 50% 32%; /* Dark Green */
+    --primary-hover: 145 50% 28%; /* Darker Green for Hover */
+    --primary-light: 145 40% 92%; /* Light Green Background */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 17% 98%;
@@ -27,34 +28,34 @@ All colors MUST be HSL.
     --muted: 210 17% 96%;
     --muted-foreground: 215 13% 57%;
 
-    --accent: 158 64% 52%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 145 50% 32%; /* Match primary color */
+    --accent-foreground: 0 0% 100%; /* Contrast for accent */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 215 14% 89%;
     --input: 215 14% 89%;
-    --ring: 158 64% 52%;
+    --ring: 145 50% 32%; /* Match primary color */
 
     /* Medical Design Tokens */
-    --medical-primary: 158 64% 52%; /* Teal Green */
-    --medical-primary-light: 158 64% 85%;
-    --medical-primary-dark: 158 64% 35%;
+    --medical-primary: 145 50% 32%; /* Dark Green */
+    --medical-primary-light: 145 40% 92%; /* Light Green */
+    --medical-primary-dark: 145 50% 25%; /* Darker Green */
     --medical-neutral: 215 13% 57%;
     --medical-neutral-light: 210 17% 96%;
     --medical-surface: 0 0% 100%;
     --medical-text: 215 25% 27%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(158 64% 52%), hsl(158 64% 42%));
+    --gradient-hero: linear-gradient(135deg, hsl(145 50% 32%), hsl(145 50% 25%));
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 17% 98%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 17% 99%));
 
     /* Shadows */
-    --shadow-soft: 0 2px 20px -2px hsl(158 64% 52% / 0.1);
-    --shadow-medical: 0 4px 30px -4px hsl(158 64% 52% / 0.15);
-    --shadow-elevated: 0 8px 50px -8px hsl(158 64% 52% / 0.2);
+    --shadow-soft: 0 2px 20px -2px hsl(145 50% 32% / 0.1);
+    --shadow-medical: 0 4px 30px -4px hsl(145 50% 32% / 0.15);
+    --shadow-elevated: 0 8px 50px -8px hsl(145 50% 32% / 0.2);
 
     /* Typography */
     --font-heading: 'Playfair Display', serif;
