@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import FloatingWhatsApp from "./FloatingWhatsApp";
-import { ThemeCustomizer } from "./ThemeCustomizer";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,10 +11,10 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
-      <ThemeCustomizer />
       <FloatingWhatsApp />
     </div>
   );
