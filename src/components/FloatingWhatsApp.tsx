@@ -1,5 +1,4 @@
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingWhatsApp = () => {
   const whatsappNumber = "+919999999999"; // This would come from env in production
@@ -7,21 +6,15 @@ const FloatingWhatsApp = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <Button
-        asChild
-        size="lg"
-        className="h-14 w-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl medical-transition"
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Contact via WhatsApp"
+        className="h-16 w-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl medical-transition flex items-center justify-center"
       >
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center"
-        >
-          <MessageCircle className="h-6 w-6 text-white" />
-        </a>
-      </Button>
+        <FaWhatsapp className="h-9 w-9 text-white" />
+      </a>
     </div>
   );
 };

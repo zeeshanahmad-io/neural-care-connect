@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MessageCircle, Award, Clock, Heart } from "lucide-react";
+import { Calendar, Award, Clock, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-medical.jpg";
+import { FaWhatsapp } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -32,7 +33,7 @@ const HeroSection = () => {
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg">
                 <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <FaWhatsapp className="mr-2 h-5 w-5" />
                   WhatsApp Consultation
                 </a>
               </Button>

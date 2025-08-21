@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, Zap, Target, Activity, Stethoscope, Timer, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Services = () => {
   const services = [
@@ -50,6 +51,8 @@ const Services = () => {
     }
   ];
 
+  const whatsappUrl = `https://wa.me/919999999999?text=Hello Dr. Faiyaz Ahmad, I have an urgent consultation request.`;
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-16">
@@ -68,40 +71,42 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="medical-card-gradient hover:shadow-lg medical-transition group">
+            <Card key={index} className="flex flex-col h-full medical-card-gradient hover:shadow-lg medical-transition group">
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary-light rounded-full flex items-center justify-center group-hover:bg-primary/20 medical-transition">
-                  <service.icon className="h-8 w-8 text-primary" />
+                  <service.icon className="h-10 w-10 text-primary" />
                 </div>
                 <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div>
-                  <h4 className="font-semibold text-sm text-foreground mb-2">Conditions Treated:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.conditions.map((condition, idx) => (
-                      <span 
-                        key={idx} 
-                        className="text-xs bg-primary-light text-primary px-2 py-1 rounded-full"
-                      >
-                        {condition}
-                      </span>
-                    ))}
+              <CardContent className="flex flex-col flex-grow p-6">
+                <div className="flex-grow space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground mb-2">Conditions Treated:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.conditions.map((condition, idx) => (
+                        <span 
+                          key={idx} 
+                          className="text-xs bg-primary-light text-primary px-2 py-1 rounded-full"
+                        >
+                          {condition}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="border-t pt-4">
+                    <h4 className="font-semibold text-sm text-foreground mb-2">When to consult:</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {service.whenToConsult}
+                    </p>
                   </div>
                 </div>
 
-                <div className="border-t pt-4">
-                  <h4 className="font-semibold text-sm text-foreground mb-2">When to consult:</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {service.whenToConsult}
-                  </p>
-                </div>
-
-                <Button asChild className="w-full mt-4">
+                <Button asChild className="w-full mt-6">
                   <Link to="/appointments">
                     <Calendar className="mr-2 h-4 w-4" />
                     Book Consultation

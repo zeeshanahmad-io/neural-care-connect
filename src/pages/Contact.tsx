@@ -7,7 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MessageCircle, Clock, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -20,6 +21,8 @@ const Contact = () => {
     priority: "",
     message: ""
   });
+
+  const whatsappUrl = `https://wa.me/919999999999?text=Hello Dr. Faiyaz Ahmad, I have a question.`;
 
   const encode = (data: { [key: string]: any }) => {
     return Object.keys(data)
@@ -69,15 +72,17 @@ const Contact = () => {
       description: "Speak directly with our medical team",
       contact: "+91 99999 99999",
       availability: "Mon-Sat: 9 AM - 6 PM",
-      action: "Call Now"
+      action: "Call Now",
+      href: "tel:+919999999999"
     },
     {
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       title: "WhatsApp Support",
       description: "Quick responses for urgent queries",
       contact: "+91 99999 99999",
       availability: "24/7 Emergency Support",
-      action: "Chat on WhatsApp"
+      action: "Chat on WhatsApp",
+      href: whatsappUrl
     },
     {
       icon: Mail,
@@ -85,7 +90,8 @@ const Contact = () => {
       description: "Detailed inquiries and documentation",
       contact: "contact@drfaiyazahmad.com",
       availability: "Response within 24 hours",
-      action: "Send Email"
+      action: "Send Email",
+      href: "mailto:contact@drfaiyazahmad.com"
     }
   ];
 
@@ -146,8 +152,8 @@ const Contact = () => {
                   <p className="font-semibold">{method.contact}</p>
                   <p className="text-sm text-muted-foreground">{method.availability}</p>
                 </div>
-                <Button className="w-full" variant="outline">
-                  {method.action}
+                <Button asChild className="w-full" variant="outline">
+                  <a href={method.href} target={method.href.startsWith("http") ? "_blank" : "_self"} rel="noopener noreferrer">{method.action}</a>
                 </Button>
               </CardContent>
             </Card>
@@ -274,7 +280,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MessageCircle className="h-5 w-5 text-primary" />
+                    <FaWhatsapp className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">+91 99999 99999</p>
                       <p className="text-sm text-muted-foreground">WhatsApp Support</p>
