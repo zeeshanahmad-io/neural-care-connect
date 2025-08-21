@@ -21,27 +21,41 @@ const Contact = () => {
     message: ""
   });
 
+  const encode = (data: { [key: string]: any }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Message Sent Successfully",
-      description: "Thank you for contacting us. We'll respond within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      priority: "",
-      message: ""
-    });
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact-requests", ...formData })
+      });
+
+      toast({
+        title: "Message Sent Successfully",
+        description: "Thank you for contacting us. We'll respond within 24 hours.",
+      });
+
+      setFormData({
+        name: "", email: "", phone: "", subject: "", priority: "", message: ""
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Submission Error",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -69,7 +83,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Support",
       description: "Detailed inquiries and documentation",
-      contact: "dr.faiyaz@example.com",
+      contact: "contact@drfaiyazahmad.com",
       availability: "Response within 24 hours",
       action: "Send Email"
     }
@@ -105,6 +119,16 @@ const Contact = () => {
             any of the convenient methods below, and we'll respond promptly to assist you.
           </p>
         </div>
+
+        {/* Hidden form for Netlify to detect fields */}
+        <form name="contact-requests" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="subject" />
+          <input type="text" name="priority" />
+          <textarea name="message"></textarea>
+        </form>
 
         {/* Contact Methods */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -259,7 +283,7 @@ const Contact = () => {
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">dr.faiyaz@example.com</p>
+                      <p className="font-medium">contact@drfaiyazahmad.com</p>
                       <p className="text-sm text-muted-foreground">Email Support</p>
                     </div>
                   </div>

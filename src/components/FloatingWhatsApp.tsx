@@ -10,7 +10,7 @@ const FloatingWhatsApp = () => {
       <Button
         asChild
         size="lg"
-        className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl medical-transition"
+        className="h-14 w-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg hover:shadow-xl medical-transition"
         aria-label="Contact via WhatsApp"
       >
         <a

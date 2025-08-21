@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary/30">
       <div className="absolute inset-0 neural-pattern"></div>
       
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+      <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">

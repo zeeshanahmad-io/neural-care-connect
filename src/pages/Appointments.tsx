@@ -37,6 +37,12 @@ const Appointments = () => {
     "Telemedicine Consultation"
   ];
 
+  const encode = (data: { [key: string]: any }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
@@ -50,25 +56,32 @@ const Appointments = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Appointment Request Sent",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
-    });
-    
-    setIsSubmitting(false);
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      preferredDate: "",
-      preferredTime: "",
-      reason: "",
-      consultationType: "",
-      consent: false
-    });
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "appointment-requests", ...formData })
+      });
+      
+      toast({
+        title: "Appointment Request Sent",
+        description: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+      
+      setFormData({
+        name: "", phone: "", email: "", preferredDate: "", preferredTime: "",
+        reason: "", consultationType: "", consent: false
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Submission Error",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -87,6 +100,18 @@ const Appointments = () => {
             Please fill out the form below and we'll confirm your appointment within 24 hours.
           </p>
         </div>
+
+        {/* Hidden form for Netlify to detect fields */}
+        <form name="appointment-requests" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="tel" name="phone" />
+          <input type="email" name="email" />
+          <input type="text" name="consultationType" />
+          <input type="date" name="preferredDate" />
+          <input type="text" name="preferredTime" />
+          <textarea name="reason"></textarea>
+          <input type="checkbox" name="consent" />
+        </form>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Appointment Form */}

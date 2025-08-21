@@ -8,7 +8,7 @@ const Location = () => {
     name: "Dr. Faiyaz Ahmad Neurology Clinic",
     address: "123 Medical Complex, Bailey Road, Patna, Bihar 800001",
     phone: "+91 99999 99999",
-    email: "dr.faiyaz@example.com"
+    email: "contact@drfaiyazahmad.com"
   };
 
   const workingHours = [
@@ -178,8 +178,8 @@ const Location = () => {
               <CardContent>
                 <ul className="space-y-2">
                   {parkingInfo.map((info, index) => (
-                    <li key={index} className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <li key={index} className="flex items-start">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0 mt-1.5"></div>
                       <span className="text-muted-foreground">{info}</span>
                     </li>
                   ))}
