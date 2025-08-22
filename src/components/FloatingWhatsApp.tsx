@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingWhatsApp = () => {
-  const whatsappNumber = "+919999999999"; // This would come from env in production
+  const whatsappNumber = "+918102779584"; // This would come from env in production
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=Hello Dr. Faiyaz Ahmad, I would like to schedule a consultation.`;
 
   return (

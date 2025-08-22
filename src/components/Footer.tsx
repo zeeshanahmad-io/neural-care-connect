@@ -1,28 +1,74 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { useToast } from "@/hooks/use-toast";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 const Footer = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  const encode = (data: { [key: string]: any }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "newsletter", email })
+      });
+
+      toast({
+        title: "Subscribed!",
+        description: "Thanks for subscribing to our newsletter.",
+      });
+      setEmail("");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Submission Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="bg-secondary/50 py-12 text-muted-foreground">
       <div className="container mx-auto px-4">
+        {/* Hidden form for Netlify */}
+        <form name="newsletter" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="email" name="email" />
+        </form>
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Clinic Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-heading font-semibold text-foreground">Dr. Faiyaz Ahmad</h3>
+            <h3 className="text-lg font-heading font-semibold text-foreground">Healthy Minds Brain & Nerve Clinic</h3>
             <p className="text-sm leading-relaxed">
               Expert neurological care with compassion. Dedicated to your health and well-being.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                <p className="text-sm">123 Medical Complex, Patna, Bihar</p>
+                <MapPin className="h-6 w-6 text-primary" />
+                <p className="text-sm">G-105, P.C Colony, opp Aditya Vision, kankarbagh, Patna, Bihar 800020, India</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <p className="text-sm">+91 99999 99999</p>
+                <p className="text-sm">+91 8102779584</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
@@ -39,7 +85,7 @@ const Footer = () => {
               <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link to="/appointments" className="hover:text-primary transition-colors">Appointments</Link></li>
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link to="/contact" className-="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -53,13 +99,23 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter (Placeholder) */}
+          {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-lg font-heading font-semibold text-foreground">Newsletter</h3>
             <p className="text-sm">Stay updated with our latest news and health tips.</p>
-            {/* You can add a newsletter signup form here later */}
-            <input type="email" placeholder="Your email" className="w-full p-2 rounded-md bg-background border border-input text-foreground" />
-            <button className="w-full bg-primary text-primary-foreground p-2 rounded-md hover:bg-primary/90 transition-colors">Subscribe</button>
+            <form onSubmit={handleSubmit} className="flex space-x-2">
+              <Input
+                type="email"
+                placeholder="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-background border-input"
+              />
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              </Button>
+            </form>
           </div>
         </div>
 
