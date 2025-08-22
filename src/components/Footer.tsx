@@ -63,7 +63,7 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <MapPin className="h-6 w-6 text-primary" />
+                <MapPin className="h-8 w-8 text-primary" />
                 <p className="text-sm">G-105, P.C Colony, opp Aditya Vision, kankarbagh, Patna, Bihar 800020, India</p>
               </div>
               <div className="flex items-center space-x-2">
