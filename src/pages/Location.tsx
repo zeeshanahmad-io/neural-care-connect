@@ -6,7 +6,7 @@ import { MapPin, Clock, Phone, Car, Navigation, Train } from "lucide-react";
 const Location = () => {
   const clinicInfo = {
     name: "Healthy Minds Brain & Nerve Clinic",
-    address: "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh, Patna, Bihar 800020, India",
+    address: "Dr Faiyaz Ahmad (DM Neurology), G-105, P.C Colony, Opp Aditya Vision, Kankarbagh, Patna, Bihar 800020, India",
     phone: "+91 8102779584",
     email: "contact@drfaiyazahmad.com"
   };
