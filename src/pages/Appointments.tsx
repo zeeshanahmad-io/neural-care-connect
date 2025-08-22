@@ -249,21 +249,21 @@ const Appointments = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">Clinic: +91 99999 99999</p>
+                    <p className="font-medium">Clinic: +91 8102779584</p>
                     <p className="text-sm text-muted-foreground">Mon-Sat: 9 AM - 6 PM</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MessageSquare className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">WhatsApp: +91 99999 99999</p>
+                    <p className="font-medium">WhatsApp: +91 8102779584</p>
                     <p className="text-sm text-muted-foreground">24/7 for urgent queries</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">dr.faiyaz@example.com</p>
+                    <p className="font-medium">contact@drfaiyazahmad.com</p>
                     <p className="text-sm text-muted-foreground">Response within 24 hours</p>
                   </div>
                 </div>

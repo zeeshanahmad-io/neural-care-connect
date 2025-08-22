@@ -22,7 +22,7 @@ const Contact = () => {
     message: ""
   });
 
-  const whatsappUrl = `https://wa.me/919999999999?text=Hello Dr. Faiyaz Ahmad, I have a question.`;
+  const whatsappUrl = `https://wa.me/918102779584?text=Hello Dr. Faiyaz Ahmad, I have a question.`;
 
   const encode = (data: { [key: string]: any }) => {
     return Object.keys(data)
@@ -53,7 +53,7 @@ const Contact = () => {
       console.error("Form submission error:", error);
       toast({
         title: "Submission Error",
-        description: "Something went wrong. Please try again or contact us directly.",
+        description: "Something went wrong. Please try again.",
         variant: "destructive"
       });
     } finally {
@@ -70,16 +70,16 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Consultation",
       description: "Speak directly with our medical team",
-      contact: "+91 99999 99999",
-      availability: "Mon-Sat: 9 AM - 6 PM",
+      contact: "+91 8102779584",
+      availability: "Mon-Sat: 2-4 PM, 7-9 PM",
       action: "Call Now",
-      href: "tel:+919999999999"
+      href: "tel:+918102779584"
     },
     {
       icon: FaWhatsapp,
       title: "WhatsApp Support",
       description: "Quick responses for urgent queries",
-      contact: "+91 99999 99999",
+      contact: "+91 8102779584",
       availability: "24/7 Emergency Support",
       action: "Chat on WhatsApp",
       href: whatsappUrl
@@ -275,14 +275,14 @@ const Contact = () => {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">+91 99999 99999</p>
+                      <p className="font-medium">+91 8102779584</p>
                       <p className="text-sm text-muted-foreground">Clinic Direct Line</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <FaWhatsapp className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">+91 99999 99999</p>
+                      <p className="font-medium">+91 8102779584</p>
                       <p className="text-sm text-muted-foreground">WhatsApp Support</p>
                     </div>
                   </div>
@@ -308,16 +308,32 @@ const Contact = () => {
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="font-medium">Monday - Friday</span>
-                    <span className="text-muted-foreground">9:00 AM - 6:00 PM</span>
+                    <span className="font-medium">Monday</span>
+                    <span className="text-muted-foreground">2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Tuesday</span>
+                    <span className="text-muted-foreground">2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Wednesday</span>
+                    <span className="text-muted-foreground">Closed</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Thursday</span>
+                    <span className="text-muted-foreground">2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Friday</span>
+                    <span className="text-muted-foreground">2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium">Saturday</span>
-                    <span className="text-muted-foreground">9:00 AM - 2:00 PM</span>
+                    <span className="text-muted-foreground">2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium">Sunday</span>
-                    <span className="text-muted-foreground">Emergency Only</span>
+                    <span className="text-muted-foreground">Closed</span>
                   </div>
                 </div>
               </CardContent>
@@ -333,9 +349,9 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  123 Medical Complex<br />
-                  Bailey Road, Patna<br />
-                  Bihar 800001, India
+                  G-105, P.C Colony, Opp Aditya Vision<br />
+                  Kankarbagh, Patna<br />
+                  Bihar 800020, India
                 </p>
                 <Button variant="outline" className="w-full">
                   <MapPin className="mr-2 h-4 w-4" />

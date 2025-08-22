@@ -5,30 +5,34 @@ import { MapPin, Clock, Phone, Car, Navigation, Train } from "lucide-react";
 
 const Location = () => {
   const clinicInfo = {
-    name: "Dr. Faiyaz Ahmad Neurology Clinic",
-    address: "123 Medical Complex, Bailey Road, Patna, Bihar 800001",
-    phone: "+91 99999 99999",
+    name: "Healthy Minds Brain & Nerve Clinic",
+    address: "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh, Patna, Bihar 800020, India",
+    phone: "+91 8102779584",
     email: "contact@drfaiyazahmad.com"
   };
 
   const workingHours = [
-    { day: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", time: "9:00 AM - 2:00 PM" },
-    { day: "Sunday", time: "Emergency Only" }
+    { day: "Monday", time: "2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM" },
+    { day: "Tuesday", time: "2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM" },
+    { day: "Wednesday", time: "Closed" },
+    { day: "Thursday", time: "2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM" },
+    { day: "Friday", time: "2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM" },
+    { day: "Saturday", time: "2:00 PM - 4:00 PM, 7:00 PM - 9:00 PM" },
+    { day: "Sunday", time: "Closed" }
   ];
 
   const landmarks = [
-    "Near Patna Medical College & Hospital",
-    "Opposite State Bank of India, Bailey Road",
-    "5 minutes from Fraser Road",
-    "Close to Boring Canal Road Junction"
+    "Directly opposite Aditya Vision",
+    "In the vicinity of Monal Parag's Park and Flora Fountain Park",
+    "Near various other clinics and hospitals in the area",
+    "A short drive from major city landmarks like Golghar and Gandhi Maidan"
   ];
 
   const parkingInfo = [
-    "Free parking available for patients",
-    "Wheelchair accessible entrance",
-    "Reserved spots for emergency cases",
-    "Security guard on duty during clinic hours"
+    "Ample free parking available for patients' private vehicles",
+    "Wheelchair accessible entrance and designated parking spots",
+    "Secure environment with 'Pay & Park' options nearby for extended needs",
+    "Valet parking services are also available in the Kankarbagh area"
   ];
 
   const handleGetDirections = () => {
@@ -197,9 +201,9 @@ const Location = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 text-green-700 dark:text-green-300">
-                  <p><strong>Bus Routes:</strong> 12, 15, 23, 45 (Bailey Road stop)</p>
-                  <p><strong>Auto Rickshaw:</strong> Available from all major areas</p>
-                  <p><strong>Metro:</strong> Upcoming Patna Metro (Fraser Road station - 0.8 km)</p>
+                  <p><strong>Bus:</strong> The area is well-serviced by local buses. Key operators include Sri Krishna Rath, Geetanjali Travels, and Samay Shatabdi Travels Pvt Ltd. The Bihar state bus service provides affordable connectivity to major towns.</p>
+                  <p><strong>Bus Stand:</strong> Mithapur Bus Stand is a major nearby terminal for inter-city and local buses.</p>
+                  <p><strong>Train:</strong> The clinic is easily accessible from the main Patna railway station, with frequent train services.</p>
                 </div>
               </CardContent>
             </Card>
