@@ -365,7 +365,7 @@ const Contact = () => {
               <CardContent className="p-4">
                 <h4 className="font-medium mb-2 text-red-800 dark:text-red-200">Emergency Cases</h4>
                 <p className="text-sm text-red-700 dark:text-red-300 mb-3">
-                  For life-threatening neurological emergencies, please call 102 or visit the nearest emergency department immediately.
+                  For life-threatening neurological emergencies, please call 112 or 102, or visit the nearest emergency department immediately.
                 </p>
                 <p className="text-sm text-red-600 dark:text-red-400">
                   For urgent consultations outside office hours, contact us via WhatsApp.
