@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Phone, Car, Navigation, Train } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Location = () => {
   const clinicInfo = {
@@ -40,8 +41,52 @@ const Location = () => {
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
   };
 
+  const locationSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Healthy Minds Brain & Nerve Clinic",
+    "image": "https://drfaiyazahmad.com/assets/dr-faiyaz-ahmad.png",
+    "telephone": "+91 8102779584",
+    "email": "contact@drfaiyazahmad.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "postalCode": "800020",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.5941",
+      "longitude": "85.1633"
+    },
+    "url": "https://drfaiyazahmad.com/location",
+    "hasMap": "https://maps.google.com/?q=G-105,+P.C+Colony,+Opp+Aditya+Vision,+Kankarbagh,+Patna,+Bihar+800020,+India",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+        "opens": "14:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+        "opens": "19:00",
+        "closes": "21:00"
+      }
+    ]
+  };
+
   return (
     <Layout>
+      <SEO 
+        title="Clinic Location & Timings | Kankarbagh Patna Neurologist"
+        description="Find directions to Healthy Minds Brain & Nerve Clinic, G-105 P.C Colony, opposite Aditya Vision, Kankarbagh, Patna. View timings, landmarks, parking, and transit details."
+        keywords="Dr Faiyaz Ahmad clinic address, Kankarbagh neurologist clinic, Kankarbagh Patna clinic timings, Healthy Minds clinic map, Patna neurology consultation hours"
+        schema={locationSchema}
+      />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-6">

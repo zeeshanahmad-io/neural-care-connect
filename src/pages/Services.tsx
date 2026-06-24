@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Brain, Zap, Target, Activity, Stethoscope, Timer, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const services = [
@@ -53,8 +54,72 @@ const Services = () => {
 
   const whatsappUrl = `https://wa.me/919999999999?text=Hello Dr. Faiyaz Ahmad, I have an urgent consultation request.`;
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Neurological Services by Dr. Faiyaz Ahmad",
+    "description": "Comprehensive neurology services in Patna, treating acute stroke, epilepsy, chronic migraine, Parkinson's disease, and nerve disorders.",
+    "about": [
+      {
+        "@type": "MedicalCondition",
+        "name": "Stroke",
+        "possibleTreatment": [
+          {
+            "@type": "MedicalTherapy",
+            "name": "Thrombolysis"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Mechanical Thrombectomy"
+          }
+        ]
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Epilepsy",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Antiepileptic Medication Optimization"
+        }
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Migraine",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Preventative Headache Management"
+        }
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Parkinson's Disease",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Dopaminergic Medication Therapy"
+        }
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Peripheral Neuropathy"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Alzheimer's Disease"
+      }
+    ],
+    "medicalAudience": {
+      "@type": "Patient"
+    }
+  };
+
   return (
     <Layout>
+      <SEO 
+        title="Neurology Services Patna | Stroke, Epilepsy & Migraine Treatment"
+        description="Comprehensive neurological services in Patna including acute stroke management, EEG, epilepsy treatment, chronic migraine prophylaxis, and neuropathy care."
+        keywords="neurology services Patna, stroke treatment Kankarbagh, epilepsy doctor Patna, migraine clinic Patna, Parkinson treatment Patna, neuropathy diagnosis Patna"
+        schema={servicesSchema}
+      />
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">

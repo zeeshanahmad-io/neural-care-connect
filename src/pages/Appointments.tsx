@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, Phone, Mail, User, MessageSquare } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Appointments = () => {
   const { toast } = useToast();
@@ -88,8 +89,21 @@ const Appointments = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const appointmentsSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Book Neurology Appointment - Dr. Faiyaz Ahmad",
+    "description": "Schedule a consultation with Dr. Faiyaz Ahmad (DM Neurology) at Healthy Minds Clinic in Kankarbagh, Patna. In-person, follow-ups, second opinions, and telemedicine options."
+  };
+
   return (
     <Layout>
+      <SEO 
+        title="Book Neurology Appointment Patna | Dr. Faiyaz Ahmad"
+        description="Schedule a consultation with Dr. Faiyaz Ahmad (DM Neurology) at Healthy Minds Clinic in Kankarbagh, Patna. In-person, follow-ups, second opinions, and telemedicine options."
+        keywords="book neurologist Patna, neurology appointment Patna, Dr Faiyaz Ahmad online booking, Kankarbagh neurology consultation, telemedicine doctor Patna"
+        schema={appointmentsSchema}
+      />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
