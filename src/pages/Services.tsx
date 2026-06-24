@@ -117,7 +117,7 @@ const Services = () => {
       <SEO 
         title="Neurology Services Patna | Stroke, Epilepsy & Migraine Treatment"
         description="Comprehensive neurological services in Patna including acute stroke management, EEG, epilepsy treatment, chronic migraine prophylaxis, and neuropathy care."
-        keywords="neurology services Patna, stroke treatment Kankarbagh, epilepsy doctor Patna, migraine clinic Patna, Parkinson treatment Patna, neuropathy diagnosis Patna"
+        keywords="neurology services Patna, stroke treatment Kankarbagh, epilepsy doctor Patna, migraine clinic Patna, Parkinson treatment Patna, neuropathy diagnosis Patna, best brain doctor services Patna, digital EEG test Kankarbagh, stroke paralysis recovery Patna, Parkinson disease specialist Bihar, dementia treatment Patna, diabetic neuropathy doctor Kankarbagh, carpal tunnel syndrome treatment Patna"
         schema={servicesSchema}
       />
       <div className="container mx-auto px-4 py-16">

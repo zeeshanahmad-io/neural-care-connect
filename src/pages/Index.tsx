@@ -170,7 +170,7 @@ const Index = () => {
       <SEO 
         title="Dr. Faiyaz Ahmad - Best Neurologist in Patna | Expert Neurological Care"
         description="Consult Dr. Faiyaz Ahmad (DM Neurology, Ex-AIIMS New Delhi), the leading neurologist in Patna for expert treatment of stroke, epilepsy, migraines, neuropathies, and Parkinson's at Healthy Minds Clinic, Kankarbagh."
-        keywords="Dr. Faiyaz Ahmad, neurologist Patna, best neurologist in Patna, stroke specialist Patna, epilepsy treatment Patna, migraine doctor Patna, Kankarbagh neurology clinic"
+        keywords="Dr. Faiyaz Ahmad, neurologist Patna, best neurologist in Patna, stroke specialist Patna, epilepsy treatment Patna, migraine doctor Patna, Kankarbagh neurology clinic, top neurologist in Patna, best brain specialist doctor in Patna, neuro doctor Patna Kankarbagh, fits doctor Patna, headache specialist doctor Patna, nerve specialist doctor Patna, neurology hospital in Patna, neurology clinic in Bihar"
         schema={[physicianSchema, faqSchema]}
       />
       <HeroSection />

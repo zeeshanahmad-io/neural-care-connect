@@ -115,7 +115,7 @@ const About = () => {
       <SEO 
         title="About Dr. Faiyaz Ahmad | DM Neurology, Ex-AIIMS Senior Resident"
         description="Learn more about Dr. Faiyaz Ahmad, a highly experienced consultant neurologist in Kankarbagh, Patna. Read about his qualifications (DM Neurology, MD Medicine) and training at AIIMS New Delhi."
-        keywords="Dr Faiyaz Ahmad bio, neurologist credentials Patna, Patna medical college alumni, AIIMS residency neurology, DM neurology Patna"
+        keywords="Dr Faiyaz Ahmad bio, neurologist credentials Patna, Patna medical college alumni, AIIMS residency neurology, DM neurology Patna, best brain doctor in Patna, Patna Medical College Hospital MD, DM Neurology Burdwan, IGIMS Patna professor, Paras HMRI neurologist, neurologist doctor profile Bihar, ex-AIIMS Delhi neurologist Patna"
         schema={profileSchema}
       />
       <div className="container mx-auto px-4 py-16">

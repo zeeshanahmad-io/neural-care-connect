@@ -84,7 +84,7 @@ const Location = () => {
       <SEO 
         title="Clinic Location & Timings | Kankarbagh Patna Neurologist"
         description="Find directions to Healthy Minds Brain & Nerve Clinic, G-105 P.C Colony, opposite Aditya Vision, Kankarbagh, Patna. View timings, landmarks, parking, and transit details."
-        keywords="Dr Faiyaz Ahmad clinic address, Kankarbagh neurologist clinic, Kankarbagh Patna clinic timings, Healthy Minds clinic map, Patna neurology consultation hours"
+        keywords="Dr Faiyaz Ahmad clinic address, Kankarbagh neurologist clinic, Kankarbagh Patna clinic timings, Healthy Minds clinic map, Patna neurology consultation hours, Healthy Minds Brain & Nerve Clinic Patna location, PC Colony Kankarbagh doctor clinic, neurologist clinic near Mithapur bus stand, clinic with parking Kankarbagh, neurologist timings Kankarbagh Patna"
         schema={locationSchema}
       />
       <div className="container mx-auto px-4 py-16">

@@ -101,7 +101,7 @@ const Appointments = () => {
       <SEO 
         title="Book Neurology Appointment Patna | Dr. Faiyaz Ahmad"
         description="Schedule a consultation with Dr. Faiyaz Ahmad (DM Neurology) at Healthy Minds Clinic in Kankarbagh, Patna. In-person, follow-ups, second opinions, and telemedicine options."
-        keywords="book neurologist Patna, neurology appointment Patna, Dr Faiyaz Ahmad online booking, Kankarbagh neurology consultation, telemedicine doctor Patna"
+        keywords="book neurologist Patna, neurology appointment Patna, Dr Faiyaz Ahmad online booking, Kankarbagh neurology consultation, telemedicine doctor Patna, neurologist appointment online Patna, book brain specialist Kankarbagh, video consultation neurologist Bihar, second opinion neurologist Patna, fits doctor appointment Kankarbagh"
         schema={appointmentsSchema}
       />
       <div className="container mx-auto px-4 py-16">

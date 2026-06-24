@@ -140,7 +140,7 @@ const Contact = () => {
       <SEO 
         title="Contact Dr. Faiyaz Ahmad | Phone, Email & WhatsApp Patna"
         description="Get in touch with Dr. Faiyaz Ahmad's neurology clinic in Kankarbagh, Patna. Contact us via phone (+91 8102779584), email, or 24/7 emergency WhatsApp."
-        keywords="contact Dr Faiyaz Ahmad, Patna neurology helpline, Healthy Minds clinic phone number, Kankarbagh neurologist contact, emergency neurologist Patna WhatsApp"
+        keywords="contact Dr Faiyaz Ahmad, Patna neurology helpline, Healthy Minds clinic phone number, Kankarbagh neurologist contact, emergency neurologist Patna WhatsApp, Healthy Minds clinic contact number, book neurologist Patna WhatsApp, emergency fits helpline Patna, stroke emergency helpline Patna, neurologist phone number Kankarbagh"
         schema={contactSchema}
       />
       <div className="container mx-auto px-4 py-16">
