@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Award, Clock, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-medical.jpg";
+import heroImage from "@/assets/dr-faiyaz-ahmad.png";
 import { FaWhatsapp } from "react-icons/fa";
 
 const HeroSection = () => {
@@ -68,7 +68,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src={heroImage}
-                alt="Professional medical consultation"
+                alt="Dr. Faiyaz Ahmad - Consultant Neurologist"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
