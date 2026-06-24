@@ -8,9 +8,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import SEO from "@/components/SEO";
 import { detailedArticles } from "@/data/articlesContent";
 
-import strokeBanner from "@/assets/stroke-guide-banner.png";
-import epilepsyBanner from "@/assets/epilepsy-guide-banner.png";
-import migraineBanner from "@/assets/migraine-guide-banner.png";
+import strokeBanner from "@/assets/stroke-guide-banner.jpg";
+import epilepsyBanner from "@/assets/epilepsy-guide-banner.jpg";
+import migraineBanner from "@/assets/migraine-guide-banner.jpg";
 
 // Map slugs to local assets import to prevent bundler reference errors
 const imageMap: Record<string, string> = {

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import SEO from "@/components/SEO";
 
-import strokeBanner from "@/assets/stroke-guide-banner.png";
-import epilepsyBanner from "@/assets/epilepsy-guide-banner.png";
-import migraineBanner from "@/assets/migraine-guide-banner.png";
+import strokeBanner from "@/assets/stroke-guide-banner.jpg";
+import epilepsyBanner from "@/assets/epilepsy-guide-banner.jpg";
+import migraineBanner from "@/assets/migraine-guide-banner.jpg";
 
 export const articlesData = [
   {

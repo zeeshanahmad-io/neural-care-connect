@@ -24,7 +24,7 @@ export const detailedArticles: Record<string, ArticleContent> = {
     category: "Stroke Management",
     readTime: "10 min read",
     date: "June 24, 2026",
-    image: "/src/assets/stroke-guide-banner.png",
+    image: "/src/assets/stroke-guide-banner.jpg",
     keywords: "stroke treatment Patna, stroke symptoms FAST, thrombolysis clinic Patna, mechanical thrombectomy Patna, neurologist Kankarbagh emergency, brain stroke doctor Bihar",
     introduction: `A brain stroke, often referred to as a cerebrovascular accident (CVA), is a critical medical emergency that occurs when the blood supply to part of the brain is interrupted or reduced. This deprives brain tissue of essential oxygen and nutrients, leading to rapid cell death. Within minutes, brain cells begin to die, which is why immediate medical intervention is vital. A stroke is often compared to a "heart attack of the brain" because both involve blocked blood vessels and tissue damage. In Patna, Bihar, the incidence of stroke is rising rapidly due to lifestyle changes, hypertension, diabetes, and smoking. Understanding how to identify a stroke, knowing the critical "golden hours" window period, and accessing the right treatments—such as thrombolysis and mechanical thrombectomy—can mean the difference between full recovery and permanent disability. This guide provides comprehensive, evidence-based insights into acute stroke management, recovery protocols, and emergency medical options available at specialized centers like the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
@@ -139,7 +139,7 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
     category: "Epilepsy Care",
     readTime: "9 min read",
     date: "June 23, 2026",
-    image: "/src/assets/epilepsy-guide-banner.png",
+    image: "/src/assets/epilepsy-guide-banner.jpg",
     keywords: "epilepsy treatment Patna, seizure doctor Patna, EEG test clinic Patna, epilepsy medication management, Kankarbagh neurology clinic, neurologist Patna",
     introduction: `Epilepsy is a chronic neurological disorder characterized by recurrent, unprovoked seizures. It affects millions of people worldwide, yet it remains widely misunderstood. A seizure is a sudden, uncontrolled electrical disturbance in the brain that can cause temporary changes in behavior, movements, feelings, or levels of consciousness. Experiencing a single seizure does not mean you have epilepsy; epilepsy is diagnosed when a person has had two or more unprovoked seizures at least 24 hours apart. In Bihar, many patients suffer from epilepsy silently due to social stigma or lack of correct diagnosis. Fortunately, with advanced diagnostic tools like Digital Electroencephalogram (EEG) testing and customized anti-epileptic medications, the vast majority of epilepsy cases can be successfully managed. This guide details seizure classifications, diagnostic testing, treatment options, first aid protocols, and lifestyle adjustments, highlighting the expert care offered by Dr. Faiyaz Ahmad at the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
@@ -253,7 +253,7 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
     category: "Headache Medicine",
     readTime: "9 min read",
     date: "June 22, 2026",
-    image: "/src/assets/migraine-guide-banner.png",
+    image: "/src/assets/migraine-guide-banner.jpg",
     keywords: "migraine specialist Patna, chronic headache clinic Patna, migraine prevention therapy, Kankarbagh headache treatment, neurologist consultation Patna, best neurologist Patna",
     introduction: `A migraine is not just a bad headache; it is a complex neurological disorder characterized by recurrent, pulsating headache attacks that typically affect one side of the head. These attacks are often accompanied by disabling symptoms such as nausea, vomiting, and extreme sensitivity to light, sound, and smells. While episodic migraines occur occasionally, chronic migraine is a more severe condition defined by having 15 or more headache days per month for at least three months, with at least 8 of those days meeting the criteria for a migraine. Chronic migraines can severely impact a person's quality of life, leading to missed work, school, and social events. In Patna, Bihar, many people suffer from chronic migraines without proper diagnosis, often overusing over-the-counter pain killers, which actually makes the headaches worse. Today, advanced neurological care offers highly effective solutions, ranging from identifying triggers to preventative therapies, Botox injections, and nerve blocks. This guide explores the modern clinical approach to chronic migraine management directed by consultant neurologist Dr. Faiyaz Ahmad at the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
