@@ -57,7 +57,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Clinic Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-heading font-semibold text-foreground">Healthy Minds Brain & Nerve Clinic</h3>
+            <div className="flex items-center space-x-2">
+              <img src="/logo.svg" alt="Healthy Minds Clinic Logo" className="h-6 w-6" />
+              <h3 className="text-lg font-heading font-semibold text-foreground">Healthy Minds Brain & Nerve Clinic</h3>
+            </div>
             <p className="text-sm leading-relaxed">
               Expert neurological care with compassion. Dedicated to your health and well-being.
             </p>
