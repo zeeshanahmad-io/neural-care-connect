@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" fill="none">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="clinic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular background boundary (optional / subtle) -->
+  <circle cx="256" cy="256" r="240" stroke="url(#clinic-grad)" stroke-width="24" fill="none" opacity="0.15" />
+
+  <!-- Stethoscope icon path scaled and centered -->
+  <g transform="translate(64, 64) scale(16)" stroke="url(#clinic-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Path 1: Ear pieces and connector -->
+    <path d="M6 4h-1a2 2 0 0 0 -2 2v3.5a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1" />
+    <!-- Path 2: Tubing -->
+    <path d="M8 15a6 6 0 1 0 12 0v-3" />
+    <!-- Path 3: Ear piece left stem -->
+    <path d="M11 3v2" />
+    <!-- Path 4: Ear piece right stem -->
+    <path d="M6 3v2" />
+    <!-- Chestpiece circle -->
+    <circle cx="20" cy="10" r="2" fill="url(#clinic-grad)" />
+  </g>
+</svg>
