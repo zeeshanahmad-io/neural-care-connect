@@ -19,6 +19,71 @@ const imageMap: Record<string, string> = {
   "managing-chronic-migraine-prevention-treatment": migraineBanner
 };
 
+const formatBoldText = (text: string) => {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
+
+const renderSectionContent = (content: string) => {
+  const lines = content.split("\n");
+  const renderedElements: React.ReactNode[] = [];
+  let currentListItems: React.ReactNode[] = [];
+
+  const flushList = (key: string | number) => {
+    if (currentListItems.length > 0) {
+      renderedElements.push(
+        <ul key={`list-${key}`} className="list-disc pl-6 mb-6 space-y-2">
+          {currentListItems}
+        </ul>
+      );
+      currentListItems = [];
+    }
+  };
+
+  lines.forEach((line, lineIdx) => {
+    if (line.startsWith("  - ")) {
+      const textPart = line.replace("  - ", "");
+      currentListItems.push(
+        <li key={`li-${lineIdx}`} className="ml-6 text-muted-foreground text-base">
+          {formatBoldText(textPart)}
+        </li>
+      );
+      return;
+    }
+    
+    if (line.startsWith("- ")) {
+      const textPart = line.replace("- ", "");
+      currentListItems.push(
+        <li key={`li-${lineIdx}`} className="text-muted-foreground text-base">
+          {formatBoldText(textPart)}
+        </li>
+      );
+      return;
+    }
+
+    flushList(lineIdx);
+
+    if (line.trim() === "") {
+      renderedElements.push(<div key={`spacer-${lineIdx}`} className="h-2" />);
+      return;
+    }
+
+    renderedElements.push(
+      <p key={`p-${lineIdx}`} className="mb-4 leading-relaxed text-lg text-muted-foreground">
+        {formatBoldText(line)}
+      </p>
+    );
+  });
+
+  flushList("end");
+  return renderedElements;
+};
+
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = slug ? detailedArticles[slug] : null;
@@ -147,18 +212,18 @@ const ArticleDetail = () => {
             <div className="lg:col-span-2 space-y-8">
               {/* Introduction */}
               <p className="text-xl text-foreground font-medium leading-relaxed italic border-l-4 border-primary pl-6 py-2">
-                {article.introduction}
+                {formatBoldText(article.introduction)}
               </p>
 
               {/* Sections */}
-              <div className="space-y-8 text-muted-foreground leading-relaxed text-lg">
+              <div className="space-y-8 text-foreground leading-relaxed text-lg">
                 {article.sections.map((section, idx) => (
                   <div key={idx} className="space-y-4">
                     <h2 className="text-2xl font-heading font-bold text-foreground pt-4">
                       {section.heading}
                     </h2>
                     {section.content && (
-                      <p className="whitespace-pre-line">{section.content}</p>
+                      <div className="space-y-2">{renderSectionContent(section.content)}</div>
                     )}
                   </div>
                 ))}

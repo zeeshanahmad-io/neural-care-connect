@@ -6,8 +6,6 @@ import { Shield, Users, Clock, Award, ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { articlesData } from "./Articles";
-import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const features = [
@@ -256,70 +254,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Patient Guides Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6 text-foreground">
-              Patient Guides & Neurology Insights
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Read comprehensive, expert guides on critical neurological conditions, symptoms, and treatment options written by Dr. Faiyaz Ahmad.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {articlesData.slice(0, 3).map((article, index) => (
-              <Card key={index} className="flex flex-col h-full overflow-hidden medical-card-gradient hover:shadow-lg medical-transition group border border-border/55">
-                <div className="relative aspect-video overflow-hidden border-b border-border/30">
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground font-semibold">
-                    {article.category}
-                  </Badge>
-                </div>
-                <CardContent className="flex flex-col flex-grow p-6 space-y-4">
-                  <div className="flex items-center text-xs text-muted-foreground space-x-4">
-                    <span className="flex items-center">
-                      <Clock className="mr-1 h-3.5 w-3.5" />
-                      {article.readTime}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-heading font-bold text-foreground group-hover:text-primary transition-colors leading-tight line-clamp-2">
-                    <Link to={`/articles/${article.slug}`}>
-                      {article.title}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
-                    {article.excerpt}
-                  </p>
-                  <div className="pt-4 mt-auto border-t border-border/40">
-                    <Button asChild variant="ghost" className="p-0 text-primary hover:text-primary-hover hover:bg-transparent font-semibold group/btn">
-                      <Link to={`/articles/${article.slug}`}>
-                        Read Guide
-                        <ArrowRight className="ml-2 h-4 w-4 transform group-hover/btn:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Button asChild size="lg">
-              <Link to="/articles">
-                View All Patient Guides
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
