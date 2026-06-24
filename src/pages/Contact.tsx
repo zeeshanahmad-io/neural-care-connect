@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Clock, MapPin, Send } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -113,8 +114,35 @@ const Contact = () => {
     { value: "emergency", label: "Emergency - Immediate attention needed" }
   ];
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Dr. Faiyaz Ahmad - Healthy Minds Clinic",
+    "description": "Get in touch with Healthy Minds Brain & Nerve Clinic in Patna. Contact Dr. Faiyaz Ahmad for neurology appointments, inquiries, and consultations.",
+    "mainEntity": {
+      "@type": "MedicalBusiness",
+      "name": "Healthy Minds Brain & Nerve Clinic",
+      "telephone": "+91 8102779584",
+      "email": "contact@drfaiyazahmad.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh",
+        "addressLocality": "Patna",
+        "addressRegion": "Bihar",
+        "postalCode": "800020",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <Layout>
+      <SEO 
+        title="Contact Dr. Faiyaz Ahmad | Phone, Email & WhatsApp Patna"
+        description="Get in touch with Dr. Faiyaz Ahmad's neurology clinic in Kankarbagh, Patna. Contact us via phone (+91 8102779584), email, or 24/7 emergency WhatsApp."
+        keywords="contact Dr Faiyaz Ahmad, Patna neurology helpline, Healthy Minds clinic phone number, Kankarbagh neurologist contact, emergency neurologist Patna WhatsApp, Healthy Minds clinic contact number, book neurologist Patna WhatsApp, emergency fits helpline Patna, stroke emergency helpline Patna, neurologist phone number Kankarbagh"
+        schema={contactSchema}
+      />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-heading font-bold mb-6">

@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Users, Clock, Award, ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Index = () => {
   const features = [
@@ -50,8 +52,127 @@ const Index = () => {
     }
   ];
 
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Faiyaz Ahmad",
+    "image": "https://drfaiyazahmad.com/assets/dr-faiyaz-ahmad.png",
+    "telephone": "+91 8102779584",
+    "email": "contact@drfaiyazahmad.com",
+    "medicalSpecialty": "Neurology",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "postalCode": "800020",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.5941",
+      "longitude": "85.1633"
+    },
+    "url": "https://drfaiyazahmad.com/",
+    "logo": "https://drfaiyazahmad.com/favicon.ico",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+        "opens": "14:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+        "opens": "19:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/918102779584"
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is the best neurologist in Patna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dr. Faiyaz Ahmad is a leading neurologist in Patna, Bihar, with over 12 years of specialized clinical experience. He completed MD Medicine from PMCH and DM Neurology from Burdwan Medical College, and completed intensive residency training at the prestigious AIIMS, New Delhi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Dr. Faiyaz Ahmad's neurology clinic located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dr. Faiyaz Ahmad's clinic, Healthy Minds Brain & Nerve Clinic, is located at G-105, P.C Colony, opposite Aditya Vision, Kankarbagh, Patna, Bihar 800020, India. It is easily accessible by public transport and offers ample parking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What neurological conditions does Dr. Faiyaz Ahmad treat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dr. Faiyaz Ahmad specializes in the treatment and management of acute stroke, epilepsy, chronic migraines and headaches, movement disorders (including Parkinson's disease), peripheral neuropathy, memory loss, and Alzheimer's disease."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I book an appointment with Dr. Faiyaz Ahmad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book a consultation by visiting the 'Book Appointment' page on our website at drfaiyazahmad.com/appointments and submitting the request form, or by calling the clinic directly at +91 8102779584."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the working hours of the Healthy Minds Clinic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The clinic operates Monday, Tuesday, Thursday, Friday, and Saturday from 2:00 PM to 4:00 PM and from 7:00 PM to 9:00 PM. The clinic is closed on Wednesdays and Sundays."
+        }
+      }
+    ]
+  };
+
+  const faqs = [
+    {
+      question: "Who is the best neurologist in Patna?",
+      answer: "Dr. Faiyaz Ahmad is a leading neurologist in Patna, Bihar, with over 12 years of specialized clinical experience. He completed MD Medicine from PMCH and DM Neurology from Burdwan Medical College, and completed intensive residency training at the prestigious AIIMS, New Delhi."
+    },
+    {
+      question: "Where is Dr. Faiyaz Ahmad's neurology clinic located?",
+      answer: "Dr. Faiyaz Ahmad's clinic, Healthy Minds Brain & Nerve Clinic, is located at G-105, P.C Colony, opposite Aditya Vision, Kankarbagh, Patna, Bihar 800020, India. The location is easily accessible by bus, train, and other public transport, with dedicated parking available."
+    },
+    {
+      question: "What neurological conditions does Dr. Faiyaz Ahmad treat?",
+      answer: "Dr. Faiyaz Ahmad specializes in treating complex neurological conditions, including acute stroke management, epilepsy and seizures, chronic migraine and cluster headaches, movement disorders like Parkinson's disease, peripheral neuropathy, and memory disorders like Alzheimer's or dementia."
+    },
+    {
+      question: "How can I book an appointment with Dr. Faiyaz Ahmad?",
+      answer: "You can book an appointment by navigating to our Book Appointment page and submitting the request form, or by calling the clinic direct line at +91 8102779584. You can also contact us via WhatsApp for urgent medical inquiries."
+    },
+    {
+      question: "What are the working hours of the Healthy Minds Clinic?",
+      answer: "The clinic is open on Monday, Tuesday, Thursday, Friday, and Saturday. Consultation timings are 2:00 PM - 4:00 PM and 7:00 PM - 9:00 PM. The clinic remains closed on Wednesdays and Sundays."
+    }
+  ];
+
   return (
     <Layout>
+      <SEO 
+        title="Dr. Faiyaz Ahmad - Best Neurologist in Patna | Expert Neurological Care"
+        description="Consult Dr. Faiyaz Ahmad (DM Neurology, Ex-AIIMS New Delhi), the leading neurologist in Patna for expert treatment of stroke, epilepsy, migraines, neuropathies, and Parkinson's at Healthy Minds Clinic, Kankarbagh."
+        keywords="Dr. Faiyaz Ahmad, neurologist Patna, best neurologist in Patna, stroke specialist Patna, epilepsy treatment Patna, migraine doctor Patna, Kankarbagh neurology clinic, top neurologist in Patna, best brain specialist doctor in Patna, neuro doctor Patna Kankarbagh, fits doctor Patna, headache specialist doctor Patna, nerve specialist doctor Patna, neurology hospital in Patna, neurology clinic in Bihar"
+        schema={[physicianSchema, faqSchema]}
+      />
       <HeroSection />
       
       {/* Features Section */}
@@ -134,6 +255,33 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6 text-foreground">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Find quick answers to common questions about neurological treatments, clinic schedules, and appointment bookings.
+            </p>
+          </div>
+          
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6 bg-card medical-shadow">
+                <AccordionTrigger className="text-left font-heading text-lg font-semibold hover:no-underline text-foreground py-4">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pt-2 pb-4 text-base">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

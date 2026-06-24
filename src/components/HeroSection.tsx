@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Award, Clock, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/dr-faiyaz-ahmad.png";
+import heroImage from "@/assets/dr-faiyaz-ahmad.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 const HeroSection = () => {

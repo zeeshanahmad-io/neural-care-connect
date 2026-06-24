@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Briefcase, Award, BookOpen } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const education = [
@@ -73,8 +74,50 @@ const About = () => {
     }
   ];
 
+  const profileSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dr. Faiyaz Ahmad",
+      "jobTitle": "Consultant Neurologist",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Healthy Minds Brain & Nerve Clinic",
+        "address": "G-105, P.C Colony, Opp Aditya Vision, Kankarbagh, Patna, Bihar 800020, India"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Burdwan Medical College & Hospital, West Bengal"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Patna Medical College & Hospital, Bihar"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Darbhanga Medical College & Hospital, Bihar"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "All India Institute of Medical Sciences (AIIMS), New Delhi"
+        }
+      ],
+      "description": "Consultant Neurologist in Patna with extensive experience in neurocritical care, stroke management, and epilepsy.",
+      "telephone": "+91 8102779584",
+      "email": "contact@drfaiyazahmad.com"
+    }
+  };
+
   return (
     <Layout>
+      <SEO 
+        title="About Dr. Faiyaz Ahmad | DM Neurology, Ex-AIIMS Senior Resident"
+        description="Learn more about Dr. Faiyaz Ahmad, a highly experienced consultant neurologist in Kankarbagh, Patna. Read about his qualifications (DM Neurology, MD Medicine) and training at AIIMS New Delhi."
+        keywords="Dr Faiyaz Ahmad bio, neurologist credentials Patna, Patna medical college alumni, AIIMS residency neurology, DM neurology Patna, best brain doctor in Patna, Patna Medical College Hospital MD, DM Neurology Burdwan, IGIMS Patna professor, Paras HMRI neurologist, neurologist doctor profile Bihar, ex-AIIMS Delhi neurologist Patna"
+        schema={profileSchema}
+      />
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
