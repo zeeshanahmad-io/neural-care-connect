@@ -25,7 +25,7 @@ export const detailedArticles: Record<string, ArticleContent> = {
     readTime: "10 min read",
     date: "June 24, 2026",
     image: "/src/assets/stroke-guide-banner.jpg",
-    keywords: "stroke treatment Patna, stroke symptoms FAST, thrombolysis clinic Patna, mechanical thrombectomy Patna, neurologist Kankarbagh emergency, brain stroke doctor Bihar",
+    keywords: "stroke treatment Patna, stroke symptoms FAST, thrombolysis clinic Patna, mechanical thrombectomy Patna, neurologist Kankarbagh emergency, brain stroke doctor Bihar, best stroke specialist in Patna, top neurologist in Patna, neurology hospital Patna, brain stroke symptoms treatment Patna",
     introduction: `A brain stroke, often referred to as a cerebrovascular accident (CVA), is a critical medical emergency that occurs when the blood supply to part of the brain is interrupted or reduced. This deprives brain tissue of essential oxygen and nutrients, leading to rapid cell death. Within minutes, brain cells begin to die, which is why immediate medical intervention is vital. A stroke is often compared to a "heart attack of the brain" because both involve blocked blood vessels and tissue damage. In Patna, Bihar, the incidence of stroke is rising rapidly due to lifestyle changes, hypertension, diabetes, and smoking. Understanding how to identify a stroke, knowing the critical "golden hours" window period, and accessing the right treatments—such as thrombolysis and mechanical thrombectomy—can mean the difference between full recovery and permanent disability. This guide provides comprehensive, evidence-based insights into acute stroke management, recovery protocols, and emergency medical options available at specialized centers like the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
       {
@@ -91,6 +91,10 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
   - **Smoking Cessation**: Quitting smoking cuts stroke risk in half within a few years.
   - **Healthy Diet**: Adopting a low-sodium, nutrient-dense diet (like the Mediterranean diet) rich in vegetables, fruits, and whole grains.
   - **Regular Exercise**: Engaging in moderate aerobic exercise (like brisk walking) for at least 30 minutes, 5 days a week.`
+      },
+      {
+        heading: "8. Stroke Care Infrastructure in Patna: Navigating Emergency Treatment in Bihar",
+        content: `If you are looking for the best stroke doctor in Patna, it is essential to choose a clinic that offers immediate emergency guidance and coordinated care. Dr. Faiyaz Ahmad (Consultant Neurologist, Ex-AIIMS New Delhi Senior Resident) is widely recognized as a top neurologist in Kankarbagh, Patna, for stroke prevention and rehabilitation. When a stroke strikes, families in Bihar often lose precious time traveling to distant hospitals. Having a dedicated brain specialist in Patna who can coordinate acute thrombolysis, refer for mechanical thrombectomy, and design a customized recovery plan is critical. Healthy Minds Brain & Nerve Clinic provides expert management for ischemic strokes, transient ischemic attacks (TIAs), and post-stroke paralysis rehabilitation, serving patients from Kankarbagh, Mithapur, Rajendra Nagar, and surrounding districts like Hajipur and Ara.`
       }
     ],
     faqs: [
@@ -140,7 +144,7 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
     readTime: "9 min read",
     date: "June 23, 2026",
     image: "/src/assets/epilepsy-guide-banner.jpg",
-    keywords: "epilepsy treatment Patna, seizure doctor Patna, EEG test clinic Patna, epilepsy medication management, Kankarbagh neurology clinic, neurologist Patna",
+    keywords: "epilepsy treatment Patna, seizure doctor Patna, EEG test clinic Patna, epilepsy medication management, Kankarbagh neurology clinic, neurologist Patna, best fits doctor in Patna, treatment of fits in Patna, digital EEG cost Patna, childhood epilepsy treatment Bihar, brain specialist doctor Patna",
     introduction: `Epilepsy is a chronic neurological disorder characterized by recurrent, unprovoked seizures. It affects millions of people worldwide, yet it remains widely misunderstood. A seizure is a sudden, uncontrolled electrical disturbance in the brain that can cause temporary changes in behavior, movements, feelings, or levels of consciousness. Experiencing a single seizure does not mean you have epilepsy; epilepsy is diagnosed when a person has had two or more unprovoked seizures at least 24 hours apart. In Bihar, many patients suffer from epilepsy silently due to social stigma or lack of correct diagnosis. Fortunately, with advanced diagnostic tools like Digital Electroencephalogram (EEG) testing and customized anti-epileptic medications, the vast majority of epilepsy cases can be successfully managed. This guide details seizure classifications, diagnostic testing, treatment options, first aid protocols, and lifestyle adjustments, highlighting the expert care offered by Dr. Faiyaz Ahmad at the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
       {
@@ -211,6 +215,10 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
   - Take showers instead of tub baths to prevent drowning in case of a seizure.
   - Avoid cooking over an open flame without supervision.
   - Keep home floors carpeted and sharp furniture corners cushioned.`
+      },
+      {
+        heading: "7. Epilepsy and Fits Treatment in Patna: Accessing Digital EEG Diagnostics",
+        content: `For patients searching for the best fits doctor in Patna, Healthy Minds Brain & Nerve Clinic under Dr. Faiyaz Ahmad offers advanced diagnostic facilities. An accurate diagnosis of epilepsy (fits) requires high-quality EEG reporting. Our clinic in Kankarbagh provides state-of-the-art digital EEG testing in Patna, allowing us to map abnormal brain waves and determine the exact type of epilepsy. Whether it is childhood absence seizures, juvenile myoclonic epilepsy, or complex focal seizures in adults, having a specialized neurology doctor in Patna ensures that you get the right anti-seizure medication (AED) with minimal side effects. We serve patients across Bihar looking for affordable and expert treatment for recurrent fits, convulsions, and unconsciousness spells.`
       }
     ],
     faqs: [
@@ -254,7 +262,7 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
     readTime: "9 min read",
     date: "June 22, 2026",
     image: "/src/assets/migraine-guide-banner.jpg",
-    keywords: "migraine specialist Patna, chronic headache clinic Patna, migraine prevention therapy, Kankarbagh headache treatment, neurologist consultation Patna, best neurologist Patna",
+    keywords: "migraine specialist Patna, chronic headache clinic Patna, migraine prevention therapy, Kankarbagh headache treatment, neurologist consultation Patna, best neurologist Patna, best doctor for migraine in Patna, migraine clinic Kankarbagh, Botox for migraine Patna, nerve blocks for headache Bihar, top headache doctor Patna",
     introduction: `A migraine is not just a bad headache; it is a complex neurological disorder characterized by recurrent, pulsating headache attacks that typically affect one side of the head. These attacks are often accompanied by disabling symptoms such as nausea, vomiting, and extreme sensitivity to light, sound, and smells. While episodic migraines occur occasionally, chronic migraine is a more severe condition defined by having 15 or more headache days per month for at least three months, with at least 8 of those days meeting the criteria for a migraine. Chronic migraines can severely impact a person's quality of life, leading to missed work, school, and social events. In Patna, Bihar, many people suffer from chronic migraines without proper diagnosis, often overusing over-the-counter pain killers, which actually makes the headaches worse. Today, advanced neurological care offers highly effective solutions, ranging from identifying triggers to preventative therapies, Botox injections, and nerve blocks. This guide explores the modern clinical approach to chronic migraine management directed by consultant neurologist Dr. Faiyaz Ahmad at the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna.`,
     sections: [
       {
@@ -325,6 +333,10 @@ For an ischemic stroke, the primary treatment is intravenous thrombolysis (clot-
 - **Stay Hydrated**: Dehydration is a common migraine trigger. Aim to drink 2 to 3 liters of water daily.
 - **Regular Aerobic Exercise**: Moderate, regular exercise (such as swimming, cycling, or walking) releases endorphins, which act as natural pain relievers.
 - **Integrative Therapies**: Techniques like cognitive behavioral therapy (CBT), biofeedback, and acupuncture can help reduce stress and lower the frequency of migraine attacks.`
+      },
+      {
+        heading: "7. Migraine Specialist in Patna: Advanced Botox and Nerve Block Treatments",
+        content: `If you suffer from chronic daily headaches and are looking for the best doctor for migraine in Patna, Dr. Faiyaz Ahmad offers the latest international treatment protocols. At the Healthy Minds Brain & Nerve Clinic in Kankarbagh, Patna, we go beyond simple pain relievers (which can cause rebound headaches) and offer advanced treatments like Botox injections for chronic migraine and occipital nerve blocks. As a leading headache doctor in Patna, Dr. Ahmad designs customized migraine prevention therapies to help patients recover their daily productivity. If you are experiencing throbbing head pain, sensitivity to light, or nausea, consult our specialized migraine clinic in Kankarbagh for long-term relief.`
       }
     ],
     faqs: [
